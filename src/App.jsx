@@ -1,28 +1,25 @@
-import { useState } from 'react'
+import React from 'react';
+import Navbar from './components/Navbar.jsx';
+import HeroSection from './components/HeroSection.jsx';
+import MiniGame from './components/MiniGame.jsx';
+import FeaturesGrid from './components/FeaturesGrid.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen w-full bg-black text-white">
+      <Navbar />
+      <HeroSection />
+      <MiniGame />
+      <FeaturesGrid />
+      <section id="apply" className="w-full py-14 bg-gradient-to-b from-[#0a0a14] to-black">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold">Ready to level up your AI journey?</h3>
+          <p className="mt-2 text-white/70 max-w-2xl mx-auto">Join the next cohort and learn by doing—guided by an adorable robot mentor and a library of interactive challenges.</p>
+          <a href="#game" className="inline-flex items-center justify-center mt-6 rounded-xl bg-white text-black px-6 py-3 font-semibold shadow hover:shadow-lg transition">Try the Demo</a>
         </div>
-      </div>
+      </section>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
